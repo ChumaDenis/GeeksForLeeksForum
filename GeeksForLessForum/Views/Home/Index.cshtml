@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+@model List<Topic>
+
+ <a class="btn btn-primary" href="/Topic/CreateTopic">Add topic</a>
+@foreach(var i in Model){
+    <a  href="/Topic/Index/@i.Id"  class="card">
+        <h3>@i.Title</h3>
+        <p>@i.CreatedDate</p>
+        <a class="bnt btn-primary" href="/Topic/Delete/@i.Id">Delete</a>
+    
+    </a>
+    
+}

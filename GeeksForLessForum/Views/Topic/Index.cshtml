@@ -4,13 +4,13 @@
 <h3>@Model.Title</h3>
 @foreach(var post in ViewBag.Posts)
 {
-    <div class="card">
-        <div class="card-header row">
-            <div class="p-0 pl-sm-3 pl-md-0 pr-sm-4">
+    <div class="card flex-container">
+        <div class="card-header div-header ">
+            <div class="header">
                 <p >@post.UserName</p>
             </div>
-            <div class="ol-4 ml-auto mr-3 ">
-                <a class="col-2">Відповісти</a>
+            <div class="header">
+                <a class="">Відповісти</a>
             </div>
         </div>
         <div class="card-body">

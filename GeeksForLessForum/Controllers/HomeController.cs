@@ -18,13 +18,12 @@ namespace GeeksForLessForum.Controllers
         {
             return View(_topic.topics.ToList());
         }
-        
-        
 
-        public IActionResult Privacy()
+        public IActionResult Index(string UserName)
         {
-            return View();
+            return View(_topic.topics.ToList());
         }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

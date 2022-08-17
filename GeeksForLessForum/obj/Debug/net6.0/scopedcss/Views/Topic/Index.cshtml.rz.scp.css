@@ -1,0 +1,11 @@
+.header[b-6usi92tnon] {
+    align-items: center;
+    display: inline-block;
+}
+.div-header[b-6usi92tnon] {
+    display: flex;
+    justify-content:space-between;
+}
+.card-header[b-6usi92tnon] {
+    padding: 0.1rem 0.8rem;
+}

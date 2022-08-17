@@ -270,3 +270,4 @@ C:\Users\chumi\source\repos\GeeksForLessForum\GeeksForLessForum\obj\Debug\net6.0
 C:\Users\chumi\source\repos\GeeksForLessForum\GeeksForLessForum\bin\Debug\net6.0\libman.json
 C:\Users\chumi\source\repos\GeeksForLessForum\GeeksForLessForum\bin\Debug\net6.0\SendGrid.dll
 C:\Users\chumi\source\repos\GeeksForLessForum\GeeksForLessForum\bin\Debug\net6.0\StarkbankEcdsa.dll
+C:\Users\chumi\source\repos\GeeksForLessForum\GeeksForLessForum\obj\Debug\net6.0\scopedcss\Views\Topic\Index.cshtml.rz.scp.css

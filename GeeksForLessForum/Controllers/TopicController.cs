@@ -24,10 +24,11 @@ namespace GeeksForLessForum.Controllers
         {
             ViewBag.Posts = _post.PostsInfo.ToList().Where(x => x.IdOfTopic == id).ToList();
             return View(_topic.topics.ToList().Find(x => x.Id == id));
-        }
+        } 
         [Authorize]
         public IActionResult CreateTopic()
         {
+
             return View();
         }
         [Authorize]
@@ -37,6 +38,7 @@ namespace GeeksForLessForum.Controllers
             {
                 return RedirectToAction("Error", "Home");
             }
+            topic.UserName = this.User.Identity.Name;
             topic.CreatedDate = DateTime.Now;
             _topic.topics.Add(topic);
             _topic.SaveChanges();

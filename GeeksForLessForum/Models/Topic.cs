@@ -11,6 +11,7 @@ namespace GeeksForLessForum.Models
         public string Title { get; set; } = null;
         [Required]
         public DateTime CreatedDate { get; set; }
-
+        [Required]
+        public string UserName { get; set; }
     }
 }

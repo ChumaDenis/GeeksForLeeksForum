@@ -10,6 +10,6 @@ namespace GeeksForLessForum.Context
 
         }
 
-        public DbSet<Topic> topics { get; set; }
+        public DbSet<Topic> TopicsInfo { get; set; }
     }
 }

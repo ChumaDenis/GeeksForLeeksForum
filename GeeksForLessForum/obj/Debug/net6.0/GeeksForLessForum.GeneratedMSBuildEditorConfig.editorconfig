@@ -47,10 +47,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/chumi/source/repos/GeeksForLessForum/GeeksForLessForum/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/chumi/source/repos/GeeksForLessForum/GeeksForLessForum/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -67,10 +63,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9waWNcQ3JlYXRlVG9waWMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/chumi/source/repos/GeeksForLessForum/GeeksForLessForum/Views/Topic/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9waWNcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/chumi/source/repos/GeeksForLessForum/GeeksForLessForum/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -82,3 +74,7 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/chumi/source/repos/GeeksForLessForum/GeeksForLessForum/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-8dc6ewlery
+
+[C:/Users/chumi/source/repos/GeeksForLessForum/GeeksForLessForum/Views/Topic/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9waWNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-6usi92tnon

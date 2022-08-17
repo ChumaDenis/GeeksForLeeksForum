@@ -1,0 +1,11 @@
+﻿.header {
+    align-items: center;
+    display: inline-block;
+}
+.div-header {
+    display: flex;
+    justify-content:space-between;
+}
+.card-header {
+    padding: 0.1rem 0.8rem;
+}

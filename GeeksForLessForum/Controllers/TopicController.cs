@@ -20,16 +20,18 @@ namespace GeeksForLessForum.Controllers
             _post = post;
         }
         
-        public IActionResult Index(int id)
+        public IActionResult Index(int id, string Response="none")
         {
             ViewBag.Posts = _post.PostsInfo.ToList().Where(x => x.IdOfTopic == id).ToList();
-            return View(_topic.topics.ToList().Find(x => x.Id == id));
+            
+            ViewBag.Response = Response;
+            return View(_topic.TopicInfo.ToList().Find(x => x.Id == id));
         } 
         [Authorize]
         public IActionResult CreateTopic()
         {
 
-            return View();
+            return View(_topic.TopicInfo.ToList());
         }
         [Authorize]
         public IActionResult Add(Topic topic)
@@ -40,23 +42,21 @@ namespace GeeksForLessForum.Controllers
             }
             topic.UserName = this.User.Identity.Name;
             topic.CreatedDate = DateTime.Now;
-            _topic.topics.Add(topic);
+            _topic.TopicInfo.Add(topic);
             _topic.SaveChanges();
-            return RedirectToAction("Index", "Home", _topic.topics.ToList());
+            return RedirectToAction("Index", "Home", _topic.TopicInfo.ToList());
         }
         [Authorize]
         public IActionResult Delete(int id)
         {
-            var topic = _topic.topics.ToList().Find(x => x.Id == id);
+            var topic = _topic.TopicInfo.ToList().Find(x => x.Id == id);
             if(topic !=null)
             {
-                _topic.topics.Remove(topic);
+                _topic.TopicInfo.Remove(topic);
                 _topic.SaveChanges();
             }
-
-            return RedirectToAction("Index", "Home", _topic.topics.ToList());
+            return RedirectToAction("Index", "Home", _topic.TopicInfo.ToList());
         }
-
 
         public IActionResult AddPost(int id, Post post)
         {
@@ -64,15 +64,27 @@ namespace GeeksForLessForum.Controllers
             {
                 return RedirectToAction("Error", "Home");
             }
+
+            if (_post.PostsInfo.ToList().Find(x => x.UserName == post.Response) == null)
+            {
+                post.Response = "";
+            }
             post.IdOfTopic = id;
             post.CreatedDate = DateTime.Now;
             post.UserName = "denis";
             post.UserName = this.User.Identity.Name;
+            if(post.UserName!="")
+            {
+                post.UserName = "guest";
+            }
             _post.PostsInfo.Add(post);
             _post.SaveChanges();
             ViewBag.Posts = _post.PostsInfo.ToList().Where(x => x.IdOfTopic == id).ToList();
-            return RedirectToAction("Index", "Topic", _topic.topics.ToList().Find(x => x.Id == id));
+            
+            return RedirectToAction("Index", "Topic", _topic.TopicInfo.ToList().Find(x => x.Id == id));
         }
+
+
 
     }
 }

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GeeksForLessForum.Migrations
 {
     [DbContext(typeof(UserDbContext))]
-    [Migration("20220815114635_ForumUser")]
-    partial class ForumUser
+    [Migration("20220818215201_User")]
+    partial class User
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

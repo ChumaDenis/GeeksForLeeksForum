@@ -16,12 +16,11 @@ namespace GeeksForLessForum.Controllers
 
         public IActionResult Index()
         {
-            return View(_topic.topics.ToList());
+            return View(_topic.TopicInfo.ToList());
         }
-
-        public IActionResult Index(string UserName)
+        public IActionResult MyTopics()
         {
-            return View(_topic.topics.ToList());
+            return View("Index",_topic.TopicInfo.ToList().Where(x=>x.UserName==this.User.Identity.Name).ToList());
         }
 
 

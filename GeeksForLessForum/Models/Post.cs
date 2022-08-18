@@ -14,5 +14,7 @@ namespace GeeksForLessForum.Models
         public int IdOfTopic { get; set; }
         [Required]
         public DateTime CreatedDate { get; set; }
+
+        public string Response { get; set; }
     }
 }

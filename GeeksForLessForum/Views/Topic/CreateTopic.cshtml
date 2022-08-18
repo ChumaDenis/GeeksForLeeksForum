@@ -1,10 +1,27 @@
 ﻿@using GeeksForLessForum.Models
 
-<form class="card" asp-controller="Topic"  asp-action="Add">
-    <div class="card-body">
-        <div>  
-            <input type="text" name="Topic.Title"/>
+<div class="body-container">
+    <form class="card" asp-controller="Topic" asp-action="Add">
+        <div class="card-body">
+            <div>
+                <textarea rows="2" minlength="5" type="text" name="Topic.Title" placeholder="Write.." class="input-group"></textarea>
+            </div>
+            <input type="submit" value="Send" class="btn btn-primary"/>
         </div>
-        <input type="submit"/>
-    </div>
-</form>
+    </form>
+    @foreach (var i in Model)
+    {
+        <div class=" m-2 topic-container">
+            <a href="/Topic/Index/@i.Id" class=" m-1">
+                <div class="card flex">
+                    <h4>@i.Title</h4>
+                    <div class="flex-column justify-content-between">
+                        <p class="d-inline-flex p-2">@i.CreatedDate</p>
+                        <a class="bnt btn-primary d-inline-flex p-2" href="/Topic/Delete/@i.Id">Delete</a>
+                    </div>
+                </div>
+            </a>
+        </div>
+    }
+
+</div>

@@ -1,20 +1,26 @@
-﻿
-@model Topic
+﻿@model Topic
 
 <h3>@Model.Title</h3>
-@foreach(var post in ViewBag.Posts)
+@foreach (var post in ViewBag.Posts)
 {
     <div class="card flex-container">
         <div class="card-header div-header ">
             <div class="header">
-                <p >@post.UserName</p>
+                <p>@post.UserName</p>
             </div>
             <div class="header">
-                <a class="">Відповісти</a>
+                <a href="/Topic/Index/@Model.Id?Response=@post.UserName" class="">Response</a>
             </div>
         </div>
         <div class="card-body">
-            <p>@post.Content</p>
+
+            <p>
+                @if (@post.Response != "")
+                {
+                    <a style="text-decoration:underline;">@post.Response,</a>
+                }
+                @post.Content
+            </p>
         </div>
         <div class="card-footer">
             <p>@post.CreatedDate</p>
@@ -24,11 +30,19 @@
 }
 
 
-<form class="card" action="/Topic/AddPost/@Model.Id"> 
+<form class="card" action="/Topic/AddPost/@Model.Id">
     <div class="card-body">
+        @if (@ViewBag.Response != "none")
+        {
+            <div>
+                <input type="text"  name="Post.Response" class="form-control" value="@ViewBag.Response" />
+            </div>
+        }
         <div>
-            <input type="text" name="Post.Content" class="form-control"/>
+            
+             <textarea type="text" minlength="5" name="Post.Content" class="form-control" ></textarea>
         </div>
-        <input type="submit"/>
+        <input class="btn btn-primary" type="submit" value="Send" />
     </div>
 </form>
+

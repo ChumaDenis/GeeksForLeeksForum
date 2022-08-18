@@ -1,3 +1,11 @@
+/* _content/GeeksForLessForum/Views/Home/Index.cshtml.rz.scp.css */
+.body-container[b-b1m36ybllq]{
+
+}
+.topic-container *[b-b1m36ybllq] {
+    text-decoration: none !important;
+
+}
 /* _content/GeeksForLessForum/Views/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
